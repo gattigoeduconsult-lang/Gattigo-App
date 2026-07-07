@@ -1,0 +1,6 @@
+{
+  "name": "Gattigo Edu Consult",
+  "description": "Premium International Education Consultancy & & Travel Agency helping Nigerian students study in Canada, UK, USA, Australia, Ireland, and Germany.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
