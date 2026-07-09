@@ -177,9 +177,9 @@ export default function InteractiveHub({ onSelectApply }: InteractiveHubProps) {
     <div className="bg-white rounded-3xl border border-gray-200/80 shadow-xl overflow-hidden font-sans">
       
       {/* HEADER SECTION */}
-      <div className="bg-gradient-to-r from-[#063970] to-[#04254b] p-6 text-white text-center sm:text-left flex flex-col sm:flex-row justify-between items-center gap-4">
+      <div className="bg-gradient-to-r from-[#080F81] to-[#292133] p-6 text-white text-center sm:text-left flex flex-col sm:flex-row justify-between items-center gap-4">
         <div>
-          <span className="text-[10px] uppercase font-bold tracking-widest text-[#F38B0E] bg-orange-950/40 px-2.5 py-1 rounded border border-orange-500/20 inline-block mb-1.5">
+          <span className="text-[10px] uppercase font-bold tracking-widest text-[#E51B13] bg-red-950/40 px-2.5 py-1 rounded border border-red-500/20 inline-block mb-1.5">
             Interactive Tools
           </span>
           <h3 className="font-display font-extrabold text-2xl text-white">Smart Study Abroad Hub</h3>
@@ -192,14 +192,14 @@ export default function InteractiveHub({ onSelectApply }: InteractiveHubProps) {
         <div className="flex bg-slate-900/60 p-1 rounded-xl border border-white/10 shrink-0">
           <button
             onClick={() => setActiveTab('calculator')}
-            className={`px-4 py-2 rounded-lg text-xs font-bold transition flex items-center gap-1.5 ${activeTab === 'calculator' ? 'bg-[#F38B0E] text-white shadow' : 'text-slate-300 hover:text-white'}`}
+            className={`px-4 py-2 rounded-lg text-xs font-bold transition flex items-center gap-1.5 ${activeTab === 'calculator' ? 'bg-[#E51B13] text-white shadow' : 'text-slate-300 hover:text-white'}`}
           >
             <Calculator className="h-3.5 w-3.5" />
             Naira Cost Calculator
           </button>
           <button
             onClick={() => setActiveTab('eligibility')}
-            className={`px-4 py-2 rounded-lg text-xs font-bold transition flex items-center gap-1.5 ${activeTab === 'eligibility' ? 'bg-[#F38B0E] text-white shadow' : 'text-slate-300 hover:text-white'}`}
+            className={`px-4 py-2 rounded-lg text-xs font-bold transition flex items-center gap-1.5 ${activeTab === 'eligibility' ? 'bg-[#E51B13] text-white shadow' : 'text-slate-300 hover:text-white'}`}
           >
             <BookOpen className="h-3.5 w-3.5" />
             Waiver & GPA Evaluator
@@ -220,7 +220,7 @@ export default function InteractiveHub({ onSelectApply }: InteractiveHubProps) {
             {/* Left Input panel */}
             <div className="lg:col-span-7 space-y-5">
               <h4 className="font-display font-bold text-gray-900 text-lg flex items-center gap-2">
-                <span className="p-1 rounded bg-orange-100 text-[#F38B0E]">💡</span> Select Your Profile Details
+                <span className="p-1 rounded bg-red-100 text-[#E51B13]">💡</span> Select Your Profile Details
               </h4>
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -230,7 +230,7 @@ export default function InteractiveHub({ onSelectApply }: InteractiveHubProps) {
                   <select
                     value={selectedDest}
                     onChange={(e) => setSelectedDest(e.target.value)}
-                    className="w-full text-xs rounded-xl border border-gray-200 p-3 bg-slate-50 font-semibold text-gray-800 outline-none focus:border-[#063970]"
+                    className="w-full text-xs rounded-xl border border-gray-200 p-3 bg-slate-50 font-semibold text-gray-800 outline-none focus:border-[#080F81]"
                   >
                     {Object.keys(DEST_SPECS).map((name) => (
                       <option key={name} value={name}>
@@ -246,7 +246,7 @@ export default function InteractiveHub({ onSelectApply }: InteractiveHubProps) {
                   <select
                     value={studyLevel}
                     onChange={(e) => setStudyLevel(e.target.value)}
-                    className="w-full text-xs rounded-xl border border-gray-200 p-3 bg-slate-50 font-semibold text-gray-800 outline-none focus:border-[#063970]"
+                    className="w-full text-xs rounded-xl border border-gray-200 p-3 bg-slate-50 font-semibold text-gray-800 outline-none focus:border-[#080F81]"
                   >
                     <option value="Undergraduate">Bachelor (Undergraduate)</option>
                     <option value="Postgraduate">Master (Postgraduate)</option>
@@ -265,7 +265,7 @@ export default function InteractiveHub({ onSelectApply }: InteractiveHubProps) {
                         key={style}
                         type="button"
                         onClick={() => setLivingStyle(style)}
-                        className={`py-1.5 rounded-lg text-[10px] font-bold uppercase transition ${livingStyle === style ? 'bg-white text-[#063970] shadow-sm' : 'text-gray-500 hover:text-gray-900'}`}
+                        className={`py-1.5 rounded-lg text-[10px] font-bold uppercase transition ${livingStyle === style ? 'bg-white text-[#080F81] shadow-sm' : 'text-gray-500 hover:text-gray-900'}`}
                       >
                         {style}
                       </button>
@@ -279,7 +279,7 @@ export default function InteractiveHub({ onSelectApply }: InteractiveHubProps) {
                   <select
                     value={waecEnglish}
                     onChange={(e) => setWaecEnglish(e.target.value)}
-                    className="w-full text-xs rounded-xl border border-gray-200 p-2.5 bg-slate-50 font-semibold text-gray-800 outline-none focus:border-[#063970]"
+                    className="w-full text-xs rounded-xl border border-gray-200 p-2.5 bg-slate-50 font-semibold text-gray-800 outline-none focus:border-[#080F81]"
                   >
                     <option value="A1">A1 (Excellent)</option>
                     <option value="B2">B2 (Very Good)</option>
@@ -298,7 +298,7 @@ export default function InteractiveHub({ onSelectApply }: InteractiveHubProps) {
               <div className="bg-slate-50 p-4 rounded-2xl border border-gray-100 space-y-2">
                 <div className="flex justify-between items-center text-xs">
                   <span className="font-semibold text-gray-600">Your Sponsor's Maximum Budget Availability</span>
-                  <span className="font-extrabold text-[#F38B0E] text-base">₦{sponsorBudget} Million</span>
+                  <span className="font-extrabold text-[#E51B13] text-base">₦{sponsorBudget} Million</span>
                 </div>
                 <input
                   type="range"
@@ -307,7 +307,7 @@ export default function InteractiveHub({ onSelectApply }: InteractiveHubProps) {
                   step="5"
                   value={sponsorBudget}
                   onChange={(e) => setSponsorBudget(Number(e.target.value))}
-                  className="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-[#F38B0E]"
+                  className="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-[#E51B13]"
                 />
                 <div className="flex justify-between text-[9px] text-gray-400 font-bold font-mono">
                   <span>₦5 Million</span>
@@ -323,7 +323,7 @@ export default function InteractiveHub({ onSelectApply }: InteractiveHubProps) {
             <div className="lg:col-span-5 bg-slate-50 border border-gray-100 rounded-2xl p-5 flex flex-col justify-between gap-5">
               <div className="space-y-4">
                 <div className="border-b border-gray-200 pb-3">
-                  <span className="text-[9px] uppercase tracking-wider font-bold text-[#063970] block">Estimated Cost breakdown</span>
+                  <span className="text-[9px] uppercase tracking-wider font-bold text-[#080F81] block">Estimated Cost breakdown</span>
                   <h5 className="font-display font-extrabold text-lg text-slate-900 mt-0.5">{selectedDest} Budget Evaluation</h5>
                 </div>
 
@@ -350,7 +350,7 @@ export default function InteractiveHub({ onSelectApply }: InteractiveHubProps) {
                   <div className="border-t border-dashed border-gray-200 pt-3 flex justify-between items-center text-sm">
                     <span className="font-bold text-gray-700">Estimated Total Capital</span>
                     <div className="text-right">
-                      <span className="block font-black text-[#063970] text-base">₦{totalNairaRequiredMillions.toFixed(1)} Million</span>
+                      <span className="block font-black text-[#080F81] text-base">₦{totalNairaRequiredMillions.toFixed(1)} Million</span>
                       <span className="block text-[9px] text-gray-400">({currentSpec.currency} {(estimatedTuitionHost + estimatedPofHost).toLocaleString()})</span>
                     </div>
                   </div>
@@ -393,7 +393,7 @@ export default function InteractiveHub({ onSelectApply }: InteractiveHubProps) {
               {/* Action Buttons */}
               <button
                 onClick={handleApplyPreset}
-                className="w-full mt-4 py-3 bg-[#063970] hover:bg-[#F38B0E] text-white font-extrabold text-xs uppercase tracking-wider rounded-xl transition duration-200 flex items-center justify-center gap-1.5"
+                className="w-full mt-4 py-3 bg-[#080F81] hover:bg-[#E51B13] text-white font-extrabold text-xs uppercase tracking-wider rounded-xl transition duration-200 flex items-center justify-center gap-1.5"
               >
                 Auto-Fill Consultation with this Estimate
                 <ArrowRight className="h-3.5 w-3.5" />
@@ -416,7 +416,7 @@ export default function InteractiveHub({ onSelectApply }: InteractiveHubProps) {
             {/* Input panel */}
             <div className="lg:col-span-6 space-y-5">
               <h4 className="font-display font-bold text-gray-900 text-lg flex items-center gap-2">
-                <span className="p-1 rounded bg-orange-100 text-[#F38B0E]">🎓</span> Academic Profile Evaluator
+                <span className="p-1 rounded bg-red-100 text-[#E51B13]">🎓</span> Academic Profile Evaluator
               </h4>
 
               <div className="space-y-4">
@@ -426,7 +426,7 @@ export default function InteractiveHub({ onSelectApply }: InteractiveHubProps) {
                   <select
                     value={gpaScale}
                     onChange={(e) => setGpaScale(e.target.value)}
-                    className="w-full text-xs rounded-xl border border-gray-200 p-3 bg-slate-50 font-semibold text-gray-800 outline-none focus:border-[#063970]"
+                    className="w-full text-xs rounded-xl border border-gray-200 p-3 bg-slate-50 font-semibold text-gray-800 outline-none focus:border-[#080F81]"
                   >
                     <option value="4.5+">First Class / Distinction (GPA 4.50+ / 5.00)</option>
                     <option value="3.5-4.49">Second Class Upper / 2-1 (GPA 3.50 - 4.49)</option>
@@ -441,7 +441,7 @@ export default function InteractiveHub({ onSelectApply }: InteractiveHubProps) {
                   <select
                     value={waecEnglish}
                     onChange={(e) => setWaecEnglish(e.target.value)}
-                    className="w-full text-xs rounded-xl border border-gray-200 p-3 bg-slate-50 font-semibold text-gray-800 outline-none focus:border-[#063970]"
+                    className="w-full text-xs rounded-xl border border-gray-200 p-3 bg-slate-50 font-semibold text-gray-800 outline-none focus:border-[#080F81]"
                   >
                     <option value="A1">A1 (Excellent)</option>
                     <option value="B2">B2 (Very Good)</option>
@@ -461,7 +461,7 @@ export default function InteractiveHub({ onSelectApply }: InteractiveHubProps) {
                   <select
                     value={selectedDest}
                     onChange={(e) => setSelectedDest(e.target.value)}
-                    className="w-full text-xs rounded-xl border border-gray-200 p-3 bg-slate-50 font-semibold text-gray-800 outline-none focus:border-[#063970]"
+                    className="w-full text-xs rounded-xl border border-gray-200 p-3 bg-slate-50 font-semibold text-gray-800 outline-none focus:border-[#080F81]"
                   >
                     {Object.keys(DEST_SPECS).map((name) => (
                       <option key={name} value={name}>{name}</option>
@@ -476,7 +476,7 @@ export default function InteractiveHub({ onSelectApply }: InteractiveHubProps) {
                     id="work-exp-chk"
                     checked={hasWorkExp}
                     onChange={(e) => setHasWorkExp(e.target.checked)}
-                    className="h-4 w-4 rounded border-gray-300 text-[#063970] focus:ring-[#063970]"
+                    className="h-4 w-4 rounded border-gray-300 text-[#080F81] focus:ring-[#080F81]"
                   />
                   <label htmlFor="work-exp-chk" className="text-xs font-semibold text-gray-700 select-none cursor-pointer">
                     I have 2+ years of relevant professional work experience
@@ -489,7 +489,7 @@ export default function InteractiveHub({ onSelectApply }: InteractiveHubProps) {
             <div className="lg:col-span-6 bg-slate-50 border border-gray-100 rounded-2xl p-5 space-y-5 flex flex-col justify-between">
               <div className="space-y-4">
                 <div className="border-b border-gray-200 pb-3">
-                  <span className="text-[9px] uppercase tracking-wider font-bold text-[#F38B0E] block">Admissions Evaluation Result</span>
+                  <span className="text-[9px] uppercase tracking-wider font-bold text-[#E51B13] block">Admissions Evaluation Result</span>
                   <h5 className="font-display font-extrabold text-base text-slate-900 mt-0.5">Nigeria Academic Profile Status</h5>
                 </div>
 
@@ -540,7 +540,7 @@ export default function InteractiveHub({ onSelectApply }: InteractiveHubProps) {
                   </div>
 
                   {/* Recommendation block */}
-                  <div className="p-3.5 rounded-xl bg-orange-50/50 border border-orange-100/50 flex items-start gap-3">
+                  <div className="p-3.5 rounded-xl bg-red-50/50 border border-red-100/50 flex items-start gap-3">
                     <span className="text-xl shrink-0">💡</span>
                     <div className="text-xs text-slate-700 leading-normal">
                       <span className="font-bold block text-slate-900">Custom Advisor Strategy Recommendation</span>
@@ -556,7 +556,7 @@ export default function InteractiveHub({ onSelectApply }: InteractiveHubProps) {
 
               <button
                 onClick={handleApplyPreset}
-                className="w-full py-3 bg-[#063970] hover:bg-[#F38B0E] text-white font-extrabold text-xs uppercase tracking-wider rounded-xl transition duration-200 flex items-center justify-center gap-1.5"
+                className="w-full py-3 bg-[#080F81] hover:bg-[#E51B13] text-white font-extrabold text-xs uppercase tracking-wider rounded-xl transition duration-200 flex items-center justify-center gap-1.5"
               >
                 Auto-Fill Consultation with this Profile
                 <ArrowRight className="h-3.5 w-3.5" />

@@ -24,7 +24,7 @@ export default function UserPortal({ bookings, onAddDummyBooking }: UserPortalPr
     <div id="gtg-user-portal" className="bg-slate-950 text-white rounded-3xl p-6 md:p-8 shadow-xl border border-slate-800 backdrop-blur-md">
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-800 pb-6 mb-6">
         <div>
-          <span className="text-xs font-bold uppercase tracking-wider text-[#F38B0E] bg-orange-950/40 px-3 py-1 rounded-full">
+          <span className="text-xs font-bold uppercase tracking-wider text-[#E51B13] bg-red-950/40 px-3 py-1 rounded-full">
             Gattigo Student Workspace
           </span>
           <h2 className="text-2xl font-bold tracking-tight mt-2 flex items-center gap-2">
@@ -38,13 +38,13 @@ export default function UserPortal({ bookings, onAddDummyBooking }: UserPortalPr
         <div className="flex gap-2">
           <button
             onClick={() => setActiveTab('tracker')}
-            className={`px-4 py-2 rounded-xl text-xs font-bold transition ${activeTab === 'tracker' ? 'bg-[#F38B0E] text-white' : 'bg-slate-900 border border-slate-800 text-slate-300 hover:bg-slate-800'}`}
+            className={`px-4 py-2 rounded-xl text-xs font-bold transition ${activeTab === 'tracker' ? 'bg-[#E51B13] text-white' : 'bg-slate-900 border border-slate-800 text-slate-300 hover:bg-slate-800'}`}
           >
             My Applications ({activeCount})
           </button>
           <button
             onClick={() => setActiveTab('checklist')}
-            className={`px-4 py-2 rounded-xl text-xs font-bold transition ${activeTab === 'checklist' ? 'bg-[#F38B0E] text-white' : 'bg-slate-900 border border-slate-800 text-slate-300 hover:bg-slate-800'}`}
+            className={`px-4 py-2 rounded-xl text-xs font-bold transition ${activeTab === 'checklist' ? 'bg-[#E51B13] text-white' : 'bg-slate-900 border border-slate-800 text-slate-300 hover:bg-slate-800'}`}
           >
             Pre-Flight Checklist
           </button>
@@ -83,14 +83,14 @@ export default function UserPortal({ bookings, onAddDummyBooking }: UserPortalPr
                   >
                     <div className="space-y-1">
                       <div className="flex items-center gap-2">
-                        <span className={`text-[10px] font-bold px-2 py-0.5 rounded ${b.type === 'Consultation' ? 'bg-orange-900/30 text-orange-400' : 'bg-blue-900/30 text-blue-400'}`}>
+                        <span className={`text-[10px] font-bold px-2 py-0.5 rounded ${b.type === 'Consultation' ? 'bg-red-900/30 text-red-400' : 'bg-blue-900/30 text-blue-400'}`}>
                           {b.type}
                         </span>
                         <span className="text-slate-500 text-xs font-mono">{b.dateSubmitted}</span>
                       </div>
                       <h4 className="text-md font-bold text-slate-100 mt-1">{b.fullName}</h4>
                       <p className="text-slate-400 text-xs">
-                        Targeting <strong className="text-slate-200">{b.studyLevel}</strong> in <strong className="text-slate-200">{b.destination}</strong> for <strong className="text-orange-400">{b.preferredIntake}</strong>
+                        Targeting <strong className="text-slate-200">{b.studyLevel}</strong> in <strong className="text-slate-200">{b.destination}</strong> for <strong className="text-red-400">{b.preferredIntake}</strong>
                       </p>
                       {b.message && (
                         <p className="text-slate-500 text-[11px] italic mt-1 line-clamp-1">
@@ -101,8 +101,8 @@ export default function UserPortal({ bookings, onAddDummyBooking }: UserPortalPr
 
                     <div className="flex flex-col sm:items-end gap-2 shrink-0">
                       <div className="flex items-center gap-2">
-                        <span className="inline-block h-2.5 w-2.5 rounded-full bg-orange-500 animate-pulse" />
-                        <span className="text-xs font-bold text-orange-400">Step: {b.status}</span>
+                        <span className="inline-block h-2.5 w-2.5 rounded-full bg-red-500 animate-pulse" />
+                        <span className="text-xs font-bold text-red-400">Step: {b.status}</span>
                       </div>
                       <div className="text-[10px] text-slate-500">
                         Advisor Assigned in Lagos
@@ -134,11 +134,11 @@ export default function UserPortal({ bookings, onAddDummyBooking }: UserPortalPr
 
                   {/* Node 2 */}
                   <div className="relative animate-pulse">
-                    <div className="absolute -left-[23px] top-1.5 h-4.5 w-4.5 rounded-full bg-[#F38B0E] border-4 border-slate-950 flex items-center justify-center text-[8px]" />
+                    <div className="absolute -left-[23px] top-1.5 h-4.5 w-4.5 rounded-full bg-[#E51B13] border-4 border-slate-950 flex items-center justify-center text-[8px]" />
                     <div>
                       <h4 className="text-xs font-bold text-slate-200">Department Admission Seek</h4>
                       <p className="text-[10px] text-slate-500">Sourcing fast CAS and prompt admission evaluation in leading destinations.</p>
-                      <span className="inline-block text-[9px] bg-orange-950/40 text-[#F38B0E] px-2 py-0.5 rounded mt-1 font-mono">ACTIVE UNDER REVIEW</span>
+                      <span className="inline-block text-[9px] bg-red-950/40 text-[#E51B13] px-2 py-0.5 rounded mt-1 font-mono">ACTIVE UNDER REVIEW</span>
                     </div>
                   </div>
 
@@ -170,7 +170,7 @@ export default function UserPortal({ bookings, onAddDummyBooking }: UserPortalPr
         <div className="space-y-6">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
             <div className="p-4 rounded-xl bg-slate-900 border border-slate-800 text-center">
-              <FileText className="h-6 w-6 text-[#F38B0E] mx-auto mb-2" />
+              <FileText className="h-6 w-6 text-[#E51B13] mx-auto mb-2" />
               <h4 className="text-xs font-bold text-slate-200">WAEC / Transcripts</h4>
               <p className="text-[10px] text-slate-500 mt-1">Bring scratch card / PDF academic reports.</p>
             </div>
@@ -180,7 +180,7 @@ export default function UserPortal({ bookings, onAddDummyBooking }: UserPortalPr
               <p className="text-[10px] text-slate-500 mt-1">Must have at least 18 months validity remaining.</p>
             </div>
             <div className="p-4 rounded-xl bg-slate-900 border border-slate-800 text-center">
-              <Clock className="h-6 w-6 text-[#F38B0E] mx-auto mb-2" />
+              <Clock className="h-6 w-6 text-[#E51B13] mx-auto mb-2" />
               <h4 className="text-xs font-bold text-slate-200">Proof of Funds</h4>
               <p className="text-[10px] text-slate-500 mt-1">Provide direct bank verification code.</p>
             </div>
@@ -192,7 +192,7 @@ export default function UserPortal({ bookings, onAddDummyBooking }: UserPortalPr
           </div>
 
           <div className="p-4 rounded-xl bg-slate-900 border border-slate-800 text-xs leading-relaxed text-slate-300">
-            <h4 className="font-bold text-[#F38B0E] mb-2 uppercase tracking-wide">💡 Tips for fast immigration audits (Nigeria to Global)</h4>
+            <h4 className="font-bold text-[#E51B13] mb-2 uppercase tracking-wide">💡 Tips for fast immigration audits (Nigeria to Global)</h4>
             <ul className="list-disc leading-loose pl-4 space-y-1.5 text-slate-400">
               <li>Ensure sponsor names match parents perfectly, or compile sworn change of name affidavits!</li>
               <li>Provide clear explanations for any study gap over 18 months with letters of employment or vocational certificates.</li>

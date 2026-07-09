@@ -104,7 +104,7 @@ export default function AICoPilot() {
         <motion.button
           id="gtg-co-pilot-toggle"
           onClick={() => setIsOpen(!isOpen)}
-          className="flex h-14 w-14 items-center justify-center rounded-full bg-[#F38B0E] text-white shadow-xl hover:bg-[#d87600] focus:outline-none focus:ring-4 focus:ring-orange-300"
+          className="flex h-14 w-14 items-center justify-center rounded-full bg-[#E51B13] text-white shadow-xl hover:bg-[#b0130c] focus:outline-none focus:ring-4 focus:ring-red-300"
           whileHover={{ scale: 1.08 }}
           whileTap={{ scale: 0.95 }}
           initial={{ scale: 0, opacity: 0 }}
@@ -135,10 +135,10 @@ export default function AICoPilot() {
             transition={{ duration: 0.25, ease: 'easeOut' }}
           >
             {/* Header */}
-            <div className="bg-[#063970] p-4 text-white">
+            <div className="bg-[#080F81] p-4 text-white">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#F38B0E]">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#E51B13]">
                     <Bot className="h-5 w-5 text-white" />
                   </div>
                   <div>
@@ -160,8 +160,8 @@ export default function AICoPilot() {
 
             {/* Chat Body & Scroll Area */}
             <div className="flex-1 overflow-y-auto bg-slate-50 p-4 space-y-4">
-              <div className="rounded-xl bg-orange-50 border border-orange-100 p-3 text-xs text-[#063970] flex items-start gap-2.5 shadow-sm">
-                <Sparkles className="h-4 w-4 text-[#F38B0E] shrink-0 mt-0.5" />
+              <div className="rounded-xl bg-red-50 border border-red-100 p-3 text-xs text-[#080F81] flex items-start gap-2.5 shadow-sm">
+                <Sparkles className="h-4 w-4 text-[#E51B13] shrink-0 mt-0.5" />
                 <div>
                   <span className="font-semibold">Interactive Co-Pilot:</span> Use me to find affordable universities, test requirements, scholarship criteria, or checklist instructions.
                 </div>
@@ -173,11 +173,11 @@ export default function AICoPilot() {
                   className={`flex ${msg.sender === 'user' ? 'justify-end' : 'justify-start'}`}
                 >
                   <div className={`flex gap-2 max-w-[85%] ${msg.sender === 'user' ? 'flex-row-reverse' : ''}`}>
-                    <div className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-xs font-semibold ${msg.sender === 'user' ? 'bg-[#F38B0E] text-white' : 'bg-blue-100 text-[#063970]'}`}>
+                    <div className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-xs font-semibold ${msg.sender === 'user' ? 'bg-[#E51B13] text-white' : 'bg-blue-100 text-[#080F81]'}`}>
                       {msg.sender === 'user' ? 'You' : <GraduationCap className="h-3.5 w-3.5" />}
                     </div>
                     <div className="space-y-1">
-                      <div className={`rounded-2xl p-3 text-sm leading-relaxed shadow-sm ${msg.sender === 'user' ? 'bg-[#063970] text-white rounded-tr-none' : 'bg-white text-gray-800 rounded-tl-none border border-gray-100'}`}>
+                      <div className={`rounded-2xl p-3 text-sm leading-relaxed shadow-sm ${msg.sender === 'user' ? 'bg-[#080F81] text-white rounded-tr-none' : 'bg-white text-gray-800 rounded-tl-none border border-gray-100'}`}>
                         {msg.text.split('\n').map((paragraph, index) => (
                           <p key={index} className={index > 0 ? "mt-1.5" : ""}>{paragraph}</p>
                         ))}
@@ -192,8 +192,8 @@ export default function AICoPilot() {
                 <div className="flex justify-start">
                   <div className="flex gap-2 items-center text-xs text-gray-500 bg-white border border-gray-100 rounded-full py-1.5 px-3 shadow-sm">
                     <span className="flex h-2 w-2 relative">
-                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#F38B0E] opacity-75"></span>
-                      <span className="relative inline-flex rounded-full h-2 w-2 bg-[#F38B0E]"></span>
+                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#E51B13] opacity-75"></span>
+                      <span className="relative inline-flex rounded-full h-2 w-2 bg-[#E51B13]"></span>
                     </span>
                     <span>AI counselor is thinking...</span>
                   </div>
@@ -211,10 +211,10 @@ export default function AICoPilot() {
                     <button
                       key={i}
                       onClick={() => handleSend(promptText)}
-                      className="flex items-center justify-between text-left rounded-lg bg-white border border-gray-200 px-3 py-2 text-xs text-[#063970] hover:border-[#F38B0E] hover:bg-orange-50/40 transition font-medium"
+                      className="flex items-center justify-between text-left rounded-lg bg-white border border-gray-200 px-3 py-2 text-xs text-[#080F81] hover:border-[#E51B13] hover:bg-red-50/40 transition font-medium"
                     >
                       <span>{promptText}</span>
-                      <ChevronRight className="h-3 w-3 text-[#F38B0E]" />
+                      <ChevronRight className="h-3 w-3 text-[#E51B13]" />
                     </button>
                   ))}
                 </div>
@@ -234,13 +234,13 @@ export default function AICoPilot() {
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 placeholder="Ask about admissions, visas, fees..."
-                className="flex-1 rounded-xl border border-gray-200 px-4 py-2.5 text-sm focus:border-[#063970] focus:ring-1 focus:ring-[#063970] focus:outline-none"
+                className="flex-1 rounded-xl border border-gray-200 px-4 py-2.5 text-sm focus:border-[#080F81] focus:ring-1 focus:ring-[#080F81] focus:outline-none"
                 disabled={isLoading}
               />
               <button
                 type="submit"
                 disabled={!input.trim() || isLoading}
-                className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#063970] text-white hover:bg-[#042850] disabled:bg-gray-100 disabled:text-gray-400 transition shrink-0"
+                className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#080F81] text-white hover:bg-[#292133] disabled:bg-gray-100 disabled:text-gray-400 transition shrink-0"
               >
                 <Send className="h-4.5 w-4.5" />
               </button>
