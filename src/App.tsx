@@ -307,7 +307,7 @@ export default function App() {
         {/* Plain, clean background image still visible but without blue color overlay */}
         <div 
           className="absolute inset-0 bg-cover bg-center opacity-[0.25] z-0 pointer-events-none" 
-          style={{ backgroundImage: 'url("/Images/Gattigo%20background%20image.png")' }}
+          style={{ backgroundImage: 'url("/Images/Gattigo%20Educonsult.png")' }}
         />
 
         {/* Decorative ambient blobs */}
